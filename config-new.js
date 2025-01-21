@@ -24,6 +24,41 @@ let config = {
 		/* lets see if I can make this look or function like agenda */
 		{
 			module: "MMM-GoogleCalendar",
+			header: "Today's Calendar",
+			position: "top_center",
+			config: {
+				fetchInterval: "60000",
+				broadcastPastEvents: true,
+				broadcastEvents: true,
+				colored: true,
+				coloredText: true,
+				coloredSymbol: true,
+				maximumNumberOfDays: "1",
+				displaySymbol: false,
+				showLocation: true,
+				showEnd: true,
+				wrapEvents: true,
+				fadePoint: ".95",
+				tableClass: "small",
+				calendars: [
+					{
+						name: "family",
+						symbol: "calendar",
+						calendarID: "vrsidqatkurckm37crn4jvmkj4@group.calendar.google.com",
+						color: "#225cba"
+					},
+					{
+						name: "matt",
+						symbol: "calendar",
+						calendarID: "mclanem@umich.edu",
+						color: "#07bb09",
+					}
+				]
+			}
+		},
+
+		{
+			module: "MMM-GoogleCalendar",
 			header: "Upcoming Calendar",
 			position: "top_center",
 			config: {
@@ -33,7 +68,10 @@ let config = {
 				colored: true,
 				coloredText: true,
 				coloredSymbol: true,
-				maximumNumberOfDays: "10",
+				maximumNumberOfDays: "14",
+				displaySymbol: false,
+				showLocation: true,
+				wrapEvents: true,
 				fadePoint: ".95",
 				tableClass: "small",
 				calendars: [
